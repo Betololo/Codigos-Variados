@@ -1,3 +1,5 @@
+#DESENVOLVIDO PARA TESTAR MEUS CONHECIMENTOS
+
 import tkinter as tk
 from tkinter import ttk
 import keyboard
@@ -370,3 +372,4 @@ second_window.geometry("650x650")
 update_second_window()  # Inicia a atualização da segunda janela
 
 janela.mainloop()
+
