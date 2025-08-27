@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meta MP</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<div id="topo"></div>
+
+<body>
+
+  <!-- Hero -->
+  <section class="hero reveal" id="hero">
+    <div class="container">
+      <h1>Seu futuro no Ministério Público<br>começa aqui</h1>
+      <p> O melhor curso de segundas fases e de prova oral para Promotor de Justiça Estadual.<br>Estude com quem entende de concursos públicos. </p>
+      <a href="https://pay.hotmart.com/EXEMPLO" class="botao-destaque" target="_blank">Quero me preparar</a>
+    </div>
+  </section>
+
+  <nav class="menu-navegacao reveal" id="menu">
+  <ul>
+    <li><a href="#topo">Início</a></li>
+    <li><a href="#sobre">Sobre o Curso</a></li>
+    <li><a href="#professores">Professores</a></li>
+    <li><a href="#conteudo">Conteúdo Programático</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Sobre o Curso -->
+ <section class="sobre-curso reveal" id="sobre">
+  <div class="container">
+    <h2>Sobre o Curso</h2>
+    <div class="icones">
+      <div class="item">
+        <a href="#sobre">
+          <img src="imagens/calendar-clock.png" alt="Aulas atualizadas">
+          <p>Aulas em PDF<br>com temas quentes<br><br>Clique e saiba mais!</p>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#sobre">
+          <img src="imagens/file-invoice.png" alt="Peças práticas">
+          <p>Foco em peças práticas<br>e questões discursivas<br><br>Clique e saiba mais!</p>
+        </a>
+      </div>      
+    </div>
+  </div>
+</section>
+  <!-- Corpo Docente -->
+  <section class="corpo-docente reveal" id="professores">
+    <div class="container">
+      <h2>Corpo Docente</h2>
+      <div class="professores">
+        <div class="professor">
+        <a href="#professores">
+            <img src="imagens/isabela.jpg" alt="Isabela Cardoso">
+        </a>
+        <h3>Isabela Cardoso</h3>
+        <p>Direito Penal</p>
+        </div>
+        <div class="professor">
+        <a href="#professores">
+            <img src="imagens/fernando.jpg" alt="Fernando Neto">
+        </a>
+        <h3>Fernando Neto</h3>
+        <p>Direito Tributário</p>
+        </div>
+        <div class="professor">
+        <a href="#professores">
+         <img src="imagens/guilherme.jpg" alt="Guilherme Faleiros">
+        </a>
+         <h3>Guilherme Faleiros</h3>
+        <p>Direitos Difusos e Coletivos</p>
+        </div>  
+      </div>
+    </div>
+  </section>
+  <!-- Conteúdo Programático -->
+ <section class="conteudo-programatico reveal" id="conteudo">
+  <div class="container">
+    <h2>SIMULADOS COM CORREÇÃO INDIVIDUALIZADA</h2>
+    <ul>
+      <li><a href="#conteudo">Direito Constitucional</a></li>
+      <li><a href="#conteudo">Direito Penal e Processo Penal</a></li>
+      <li><a href="#conteudo">Direitos Difusos e Coletivos</a></li>
+      <li><a href="#conteudo">Direito Administrativo e Tributário</a></li>
+      <li><a href="#conteudo">Direito Civil e Processual Civil</a></li>
+      <li><a href="#conteudo">Peças práticas com foco nos editais</a></li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  const revealOnScroll = () => {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+
+  // inicializar ao carregar a página
+  revealOnScroll();
+</script>
+
+<footer class="footer-fixo">
+  <p>Meta Concursos 2025 &copy;</p>
+</footer>
+
+
+</body>
+</html>
